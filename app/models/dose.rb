@@ -7,6 +7,4 @@ class Dose < ActiveRecord::Base
   validates :ingredient, presence: true
   validates :cocktail, :uniqueness => {:scope => [:cocktail, :ingredient]}
 
-
-
 end
