@@ -1,14 +1,41 @@
-<h1><%=@cocktail.name%></h1>
-<ul>
+<div class="banner text-center" style="background-image: url('<%=@cocktail.image_url%>')">
+  <div class="banner-gradient"></div>
+  <div class="banner-content">
+    <h1><%=@cocktail.name%></h1>
+  </div>
+</div>
+<br>
+<div class="container">
   <%@cocktail.doses.each do |dose|%>
+    <ul class="list-inline">
 
-    <li>
-      <%=dose.ingredient.name%>: <%= dose.description %> <%= link_to('Delete', dose_path(dose), method: :delete) %>
-    </li>
+      <li>
+        <h4>
+          <%=dose.ingredient.name%>: <%= dose.description %>
+        </h4>
+      </li>
+      <li>
+        <p>
+          <%= link_to('Delete', dose_path(dose), method: :delete) %>
+        </p>
+      </li>
+    </ul>
   <%end%>
 
-</ul>
+  <br>
+  <hr>
+  <br>
 
-<p><%= link_to('Add an ingredient', new_cocktail_dose_path(@cocktail)) %></p>
-<p><%= link_to('Home', cocktails_path) %></p>
-
+  <ul class="list-inline text-center">
+    <li>
+      <%=link_to new_cocktail_dose_path(@cocktail) do%>
+        <button type="button" class="btn btn-danger">Add a dose</button>
+      <%end%>
+    </li>
+    <li>
+      <%=link_to cocktails_path do%>
+        <button type="button" class="btn btn-danger">Home</button>
+      <%end%>
+    </li>
+  </ul>
+</div>
