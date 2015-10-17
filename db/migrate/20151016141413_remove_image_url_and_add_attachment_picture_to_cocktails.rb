@@ -1,13 +1,5 @@
 class RemoveImageUrlAndAddAttachmentPictureToCocktails < ActiveRecord::Migration
-  # def self.up
-  #   remove_column :cocktails, :image_url
-  #   add_column    :cocktails, :picture, :attachment
-  # end
 
-  # def self.down
-  #   add_column    :cocktails, :image_url, :string
-  #   remove_column :cocktails, :picture
-  # end
 
   def self.up
     change_table :cocktails do |t|

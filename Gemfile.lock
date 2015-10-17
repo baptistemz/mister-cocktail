@@ -197,7 +197,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk (< 2.0)
+  aws-sdk
   better_errors
   binding_of_caller
   bootstrap-sass
@@ -207,7 +207,7 @@ DEPENDENCIES
   font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails
-  paperclip (~> 4.3)
+  paperclip
   pg
   puma
   rails (= 4.2.4)
