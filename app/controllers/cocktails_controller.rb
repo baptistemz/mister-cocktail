@@ -1,5 +1,6 @@
 class CocktailsController < ApplicationController
 
+  attr_accessor :picture
   def index
     @cocktails = Cocktail.all
   end

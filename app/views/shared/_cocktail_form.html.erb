@@ -1,5 +1,6 @@
 <%= simple_form_for @cocktail do|f| %>
   <%= f.input :name, placeholder: "Mojito" %>
-  <%= f.input :picture %>
-  <%= f.submit %>
+  <%= f.file_field :picture %>
+  <br>
+  <%= f.submit%>
 <%end%>
